@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-# Здесь мы используем паттерн: Абстрактная фабрика для создания компонентов пасты, так как он легко позволяет
-# нам создавать различные типы паст меняя лишь компоненты. И экземпляры конкретных классов не будут связаны между собой.
+
 class AbstractPastaFactory:
     @abstractmethod
     def create_pasta(self):
@@ -21,7 +20,6 @@ class AbstractPastaFactory:
         pass
 
 
-# Конкретная фабрика по созданию компонентов Карбонары
 class CarbonaraFactory(AbstractPastaFactory):
     def create_pasta(self):
         return 'Спагетти'
